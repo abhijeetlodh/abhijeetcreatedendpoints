@@ -1,1 +1,1 @@
-web: node index.js
+web: node nav.js
