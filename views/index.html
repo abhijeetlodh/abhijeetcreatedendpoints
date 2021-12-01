@@ -67,7 +67,7 @@ body {
     font-family: "Open Sans";
   }
   
-  .form input[type=text], input[type=password], input[type=email], input[type=number] {
+  .form #one, #four, #two, #three {
     font-family: "Open Sans", Calibri, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -86,14 +86,14 @@ body {
     transition: color 0.3s ease-out;
   }
   
-  .form input[type=text] {
+  .form #one {
     
     margin-bottom: 15px;
   }
-  .form input[type=email] {
+  .form #two {
     margin-bottom: 15px;
   }
-  .form input[type=number] {
+  .form #three {
     margin-bottom: 15px;
   }
   /*continued styling for input */
@@ -120,7 +120,7 @@ body {
   }
   
   
-.form input[type=submit] {
+.form #submitter {
     margin-left: 52px; 
     margin-top: 22px; 
     width: 270px;
@@ -142,21 +142,6 @@ body {
   
   }
   
-
-  .tiger{
-    margin: 50px;
-    height: 400px;
-    width: 400px;
-    background-color: red;
-  }
-  .tiger h1{
-    padding: 50px;
-  }
-  .lodh{
-    margin: 150px;
-    padding: 150px;
-    color: blue;
-  }
     </style>
   </head>
 <body>
@@ -166,24 +151,23 @@ body {
         <form class="form"  name="register" method='GET' action="/getemail">
 
             <p class="field" style="margin-top: 15px;">
-              <input type="text" id="fname" name="fname" placeholder="first name" />
-              <!-- <label for="firstname" id="firstname"></label> -->
+              <input type="text" id="one" name="fname" placeholder="first name" />
               <i class="fa fa-user"></i>
             </p>
       
             <p class="field">
-              <input type="email" id="email" placeholder="email" />
+              <input type="email" id="two" placeholder="email" />
               <i class="fa fa-envelope"></i>
             </p>
             <p class="field">
-              <input type="number" id="phone" placeholder="phone" onkeypress="return onlyNumberKey(event)"/>
+              <input type="number" id="three" placeholder="phone" onkeypress="return onlyNumberKey(event)"/>
               <i class="fa fa-phone"></i>
             </p>
             <p class="field">
-              <input type="password" id="pwd" placeholder="Password" />
+              <input type="password" id="four" placeholder="Password" />
               <i class="fa fa-lock"></i>
             </p>
-      <p class="submit"><input type="submit" ></p>
+      <p class="submit"><input  id="submitter" type="submit" ></p>
 
           </form>
       </div>  

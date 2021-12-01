@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Validation using Express-Validator</title>
+	</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        *{
+      margin: 0;
+      padding: 0;
+  }
+  
+  
+  body {
+      font: 13px/20px "Open Sans", Tahoma, Verdana, sans-serif;
+      color: #a7a599;
+      background-image: url('https://cdn.dribbble.com/users/2399335/screenshots/14689261/d_glass-morphism_card_1080p_4x.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 500px;
+    }
+  
+    .register {
+      position: relative;
+      margin: 100px auto;
+      width: 370px;
+      height: 400px;
+     background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-left: 1px solid rgba(255,255,255,0.2);
+        box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+      border-radius: 3px;
+    
+    }
+  
+    .register h1 {
+      line-height: 55px;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "Open Sans", sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-left: 1px solid rgba(255,255,255,0.2);
+        box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+        margin-top: 0px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+  
+    
+  .form {
+      width: 100%;
+    }
+    .form .field {
+      position: relative;
+      margin: 0 50px;
+    }
+    ::-webkit-input-placeholder {
+      color: #ffffff;
+      font-family: "Open Sans";
+    }
+    
+    .form #one, #four, #two, #three {
+      font-family: "Open Sans", Calibri, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 10px 15px 10px 55px;
+      position: relative;
+      width: 200px;
+      height: 24px;
+    
+      border: none;
+      background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-left: 1px solid rgba(255,255,255,0.2);
+        box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+      color: rgb(255, 255, 255);
+      transition: color 0.3s ease-out;
+    }
+    
+    .form #one {
+      
+      margin-bottom: 15px;
+    }
+    .form #two {
+      margin-bottom: 15px;
+    }
+    .form #three {
+      margin-bottom: 15px;
+    }
+    /*continued styling for input */
+    .form input[type=checkbox] {
+      display: none;
+    }
+    .form .field i {
+      font-size: 18px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      height: 44px;
+      width: 44px;
+      color: #f7f3eb;
+      background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-left: 1px solid rgba(255,255,255,0.2);
+        box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      line-height: 44px;
+      transition: all 0.3s ease-out;
+      pointer-events: none;
+    }
+    
+    
+  .form #submitter {
+      margin-left: 52px; 
+      margin-top: 22px; 
+      width: 270px;
+      text-align: center;
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      padding: 12px 0;
+    
+      color: #fff;
+      background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-left: 1px solid rgba(255,255,255,0.2);
+        box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+      border: none;
+      margin-bottom: 20px;
+    
+    }
+    
+      </style>
+<body>
+    <div class="register">
+    <h1>Registration Form</h1>
+<form class="form"  name="register" action="saveData" method="POST">
+    <p class="field">
+        <input placeholder= "Name" type="text" id="one" name="name" />
+                       <i class="fa fa-user"></i>
+
+    </p>
+    
+    <p class="field">
+        
+        <input placeholder= "Email" type="email" id="two" name="email" />       
+                <i class="fa fa-envelope"></i>
+
+    </p>
+    <p class="field">
+
+        <input placeholder= "Number" type="number" id="three" name="mobile"/>          
+             <i class="fa fa-phone"></i>
+
+    </p>
+    <p class="field">
+
+        <input placeholder= "Password" type="password" id="four" name="password"/>            
+           <i class="fa fa-lock"></i>
+
+    </p>
+    <p class="submit">
+        <input type="submit" id="submitter" value="Submit Form">
+    </p>
+</form>
+</div>
+</body>
+</html>
