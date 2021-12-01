@@ -6,7 +6,7 @@ const express = require("express")
 const path = require('path')
 const app = express()
 
-var PORT = process.env.port || 3000
+let port = process.env.PORT || 3000;
 
 app.set("views", path.join(__dirname))
 app.set("view engine", "ejs")
@@ -41,5 +41,5 @@ app.post('/saveData', [
 
 app.listen(PORT, function (error) {
 	if (error) throw error
-	console.log("Server created Successfully on PORT ", PORT)
+	console.log("Server created Successfully on PORT ", port)
 })
