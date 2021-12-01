@@ -39,7 +39,7 @@ app.post('/saveData', [
 	}
 });
 
-app.listen(PORT, function (error) {
+app.listen(port, function (error) {
 	if (error) throw error
 	console.log("Server created Successfully on PORT ", port)
 })
